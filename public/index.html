@@ -438,7 +438,10 @@ async function loadDashboard() {
   const { content } = await fetch('/api/dashboard').then(r => r.json());
   const el = document.getElementById('dashboard-content');
   el.innerHTML = marked.parse(content);
-  el.querySelectorAll('a').forEach(a => a.setAttribute('target', '_blank'));
+  el.querySelectorAll('a').forEach(a => {
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noreferrer');
+  });
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
