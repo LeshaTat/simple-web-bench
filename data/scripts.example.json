@@ -1,0 +1,15 @@
+[
+  {
+    "name": "backup",
+    "label": "Run Backup",
+    "command": "bash",
+    "args": ["/home/user/scripts/backup.sh"],
+    "cwd": "/home/user"
+  },
+  {
+    "name": "update",
+    "label": "System Update",
+    "command": "bash",
+    "args": ["-c", "apt update && apt upgrade -y"]
+  }
+]
